@@ -1,4 +1,3 @@
-import {AccountCreated} from '../templates/AccountCreatedSuccessfully'
 const logMessages = {
     unAuthorized : 'You are not authorized to access this resource to do this action!',
     sessionExpired : 'Session expired! please',
@@ -48,9 +47,6 @@ const bookingMessages = {
 
 const queueName = 'workshop_queue'
 
-const emailTemplate = {
-    AccountCreated
-}
 const ROLE_CONSTANT = {
     USER : 'user',
     ADMIN : 'admin'
@@ -83,4 +79,4 @@ const workshopMessagesValidation = {
 
 
 // const phoneRegex = /^(\+251|0)?9\d{8}$/
-export {logMessages, userErrorMessages, userMessages,workShopMessages, timeSlotMessages, bookingMessages,queueName,emailTemplate, ROLE_CONSTANT,passwordRegex, validationMessages,bookingValidationMessages,workshopMessagesValidation}
+export {logMessages, userErrorMessages, userMessages,workShopMessages, timeSlotMessages, bookingMessages,queueName, ROLE_CONSTANT,passwordRegex, validationMessages,bookingValidationMessages,workshopMessagesValidation}
