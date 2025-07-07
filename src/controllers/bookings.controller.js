@@ -98,7 +98,8 @@ const updateBookingsController = async function (req, res) {
             workshop : true
         },
       data: {
-          timeSlotId : Number(req.body.timeSlotId),
+        timeSlotId: Number(req.body.timeSlotId) || doesBookingExist.timeSlotId,
+        status : req.body.status || doesBookingExist.status,
         }
     })
     res.json({

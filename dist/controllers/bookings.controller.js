@@ -151,7 +151,8 @@ var updateBookingsController = exports.updateBookingsController = /*#__PURE__*/f
               workshop: true
             },
             data: {
-              timeSlotId: Number(req.body.timeSlotId)
+              timeSlotId: Number(req.body.timeSlotId) || doesBookingExist.timeSlotId,
+              status: req.body.status || doesBookingExist.status
             }
           });
         case 4:
