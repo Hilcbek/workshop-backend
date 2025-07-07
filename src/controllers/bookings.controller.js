@@ -83,7 +83,6 @@ const updateBookingsController = async function (req, res) {
     if(!doesBookingExist){
         throw new ApiError(bookingMessages.bookingNotFound, httpStatus.NOT_FOUND)
     }
-    
     const updatedBooking = await prisma.booking.update({
         where : {
             id : id
@@ -98,8 +97,8 @@ const updateBookingsController = async function (req, res) {
             },
             workshop : true
         },
-        data : {
-            ...req.body
+      data: {
+          timeSlotId : Number(req.body.timeSlotId),
         }
     })
     res.json({

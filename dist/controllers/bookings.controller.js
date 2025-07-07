@@ -150,7 +150,9 @@ var updateBookingsController = exports.updateBookingsController = /*#__PURE__*/f
               },
               workshop: true
             },
-            data: _objectSpread({}, req.body)
+            data: {
+              timeSlotId: Number(req.body.timeSlotId)
+            }
           });
         case 4:
           updatedBooking = _context2.sent;
