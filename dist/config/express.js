@@ -24,7 +24,7 @@ app.use((0, _morgan["default"])('combined', {
   }
 }));
 app.use((0, _cors["default"])({
-  origin: 'http://localhost:5173',
+  origin: ['https://workshop-frontend-flame.vercel.app', 'http://localhost:5173'],
   credentials: true
 }));
 app.use(/*#__PURE__*/function () {

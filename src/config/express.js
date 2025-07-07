@@ -14,7 +14,7 @@ app.use(morgan('combined', {
     }
 }))
 app.use(cors({
-    origin : 'http://localhost:5173',
+    origin : ['https://workshop-frontend-flame.vercel.app','http://localhost:5173'],
     credentials : true
 }))
 app.use(async (req, res, next) => {
