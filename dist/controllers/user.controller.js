@@ -13,13 +13,11 @@ var _httpStatus = _interopRequireDefault(require("http-status"));
 var _helper = require("../utils/helper");
 var _apierror = require("../error/apierror");
 var _constant = require("../utils/constant");
-var _worker = require("../config/worker");
-var _enviromental = require("../config/enviromental");
 function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
 function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { (0, _defineProperty2["default"])(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
 var createUserController = exports.createUserController = /*#__PURE__*/function () {
   var _ref = (0, _asyncToGenerator2["default"])(/*#__PURE__*/_regenerator["default"].mark(function _callee(req, res) {
-    var doesUserExist, newUser, mailOptions, _t, _t2, _t3, _t4, _t5, _t6, _t7, _t8;
+    var doesUserExist, newUser, _t, _t2, _t3, _t4, _t5, _t6, _t7, _t8;
     return _regenerator["default"].wrap(function (_context) {
       while (1) switch (_context.prev = _context.next) {
         case 0:
@@ -60,30 +58,6 @@ var createUserController = exports.createUserController = /*#__PURE__*/function 
           return _t.create.call(_t, _t8);
         case 4:
           newUser = _context.sent;
-          mailOptions = {
-            from: _enviromental.USER_EMAIL,
-            to: newUser.email,
-            subject: 'Workshop - Account created successfully!',
-            html: 'AccountCreated',
-            componentProps: {
-              username: newUser.username
-            }
-          };
-          _context.next = 5;
-          return _worker.workshopQueue.add('email', {
-            data: mailOptions,
-            type: 'email'
-          }, {
-            backoff: {
-              type: 'exponential',
-              delay: 1000,
-              maxDelay: 10000
-            },
-            attempts: 3,
-            removeOnComplete: true,
-            removeOnFail: true
-          });
-        case 5:
           res.json({
             data: [_objectSpread({}, (0, _helper.deletePropertuFromObject)(newUser, {
               password: req.body.password
@@ -91,7 +65,7 @@ var createUserController = exports.createUserController = /*#__PURE__*/function 
             status: _httpStatus["default"].CREATED,
             message: _constant.userMessages.userCreated
           });
-        case 6:
+        case 5:
         case "end":
           return _context.stop();
       }

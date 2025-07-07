@@ -3,8 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.workshopMessagesValidation = exports.workShopMessages = exports.validationMessages = exports.userMessages = exports.userErrorMessages = exports.timeSlotMessages = exports.queueName = exports.passwordRegex = exports.logMessages = exports.emailTemplate = exports.bookingValidationMessages = exports.bookingMessages = exports.ROLE_CONSTANT = void 0;
-var _AccountCreatedSuccessfully = require("../templates/AccountCreatedSuccessfully");
+exports.workshopMessagesValidation = exports.workShopMessages = exports.validationMessages = exports.userMessages = exports.userErrorMessages = exports.timeSlotMessages = exports.queueName = exports.passwordRegex = exports.logMessages = exports.bookingValidationMessages = exports.bookingMessages = exports.ROLE_CONSTANT = void 0;
 var logMessages = exports.logMessages = {
   unAuthorized: 'You are not authorized to access this resource to do this action!',
   sessionExpired: 'Session expired! please',
@@ -50,9 +49,6 @@ var bookingMessages = exports.bookingMessages = {
   noRighttoDoThisAction: 'You do not have the right to do this action'
 };
 var queueName = exports.queueName = 'workshop_queue';
-var emailTemplate = exports.emailTemplate = {
-  AccountCreated: _AccountCreatedSuccessfully.AccountCreated
-};
 var ROLE_CONSTANT = exports.ROLE_CONSTANT = {
   USER: 'user',
   ADMIN: 'admin'

@@ -7463,3 +7463,6 @@
 {"level":"\u001b[32minfo\u001b[39m","message":"[Redis] Connecting to server...","timestamp":"2025-07-07T11:31:44.850Z"}
 {"level":"\u001b[32minfo\u001b[39m","message":"[Redis] Connection is ready.","timestamp":"2025-07-07T11:31:44.851Z"}
 {"level":"\u001b[32minfo\u001b[39m","message":"Server is running on port 3000","timestamp":"2025-07-07T11:33:00.805Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Server is running on port 3000","timestamp":"2025-07-07T11:35:41.665Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"::1 - - [07/Jul/2025:11:35:54 +0000] \"POST /api/user/login HTTP/1.1\" 200 337 \"-\" \"PostmanRuntime/7.44.1\"\n","timestamp":"2025-07-07T11:35:54.772Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"::1 - - [07/Jul/2025:11:36:11 +0000] \"GET /api/bookings HTTP/1.1\" 200 521 \"-\" \"PostmanRuntime/7.44.1\"\n","timestamp":"2025-07-07T11:36:11.393Z"}
