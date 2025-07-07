@@ -7441,3 +7441,6 @@
 {"level":"\u001b[32minfo\u001b[39m","message":"::1 - - [07/Jul/2025:09:38:55 +0000] \"GET /api/workshops HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"\n","timestamp":"2025-07-07T09:38:55.920Z"}
 {"level":"\u001b[32minfo\u001b[39m","message":"::1 - - [07/Jul/2025:09:38:55 +0000] \"GET /api/bookings/current-user/books HTTP/1.1\" 200 467 \"http://localhost:5173/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"\n","timestamp":"2025-07-07T09:38:55.922Z"}
 {"level":"\u001b[32minfo\u001b[39m","message":"::1 - - [07/Jul/2025:09:38:57 +0000] \"GET /api/bookings/current-user/books HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"\n","timestamp":"2025-07-07T09:38:57.044Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Server is running on port 3000","timestamp":"2025-07-07T10:02:58.971Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"[Redis] Connecting to server...","timestamp":"2025-07-07T10:02:59.565Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"[Redis] Connection is ready.","timestamp":"2025-07-07T10:02:59.566Z"}
