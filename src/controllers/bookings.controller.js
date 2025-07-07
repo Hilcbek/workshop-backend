@@ -248,9 +248,14 @@ const analyticsController = async function(req,res){
       }
   
       res.status(200).json({
-        totalBookings,
+        data: {
+          totalBookings,
         totalTimeSlotsFilled: slotsFilled.length,
         popularWorkshop
+        }
+        ,
+        status: httpStatus.OK,
+        message: bookingMessages.analyticsFetched,
       });  
 }
 const getAllLoggedUserBookingsController = async (req, res) => {

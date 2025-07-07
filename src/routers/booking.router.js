@@ -12,5 +12,5 @@ bookingRouter.delete('/:id', deleteBookingValidation(), parseValidation, authMid
 bookingRouter.get('/:id', getBookingValidation(), parseValidation, authMiddleware, catchAsync(getSingleBookingController))
 bookingRouter.get('/', isAdmin, catchAsync(getAllBookingsController))
 bookingRouter.get('/current-user/books', authMiddleware, catchAsync(getAllLoggedUserBookingsController))
-bookingRouter.get('/analytics', isAdmin, catchAsync(analyticsController))
+bookingRouter.get('/booking/analytics', isAdmin, catchAsync(analyticsController))
 export {bookingRouter}
