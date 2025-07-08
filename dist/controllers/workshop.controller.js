@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.updateWorkShopController = exports.getWorkShopController = exports.getAllWorkShopsController = exports.deleteWorkShopController = exports.createWorkShopController = void 0;
 var _regenerator = _interopRequireDefault(require("@babel/runtime/regenerator"));
+var _typeof2 = _interopRequireDefault(require("@babel/runtime/helpers/typeof"));
 var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/defineProperty"));
 var _asyncToGenerator2 = _interopRequireDefault(require("@babel/runtime/helpers/asyncToGenerator"));
 var _prismaConfig = _interopRequireDefault(require("../prismaConfig"));
@@ -220,7 +221,8 @@ var deleteWorkShopController = exports.deleteWorkShopController = /*#__PURE__*/f
     return _regenerator["default"].wrap(function (_context5) {
       while (1) switch (_context5.prev = _context5.next) {
         case 0:
-          id = req.params.id;
+          console.log('deleteWorkShopController ', (0, _typeof2["default"])(req.params.id));
+          id = Number(req.params.id);
           _context5.next = 1;
           return _prismaConfig["default"].workshop.findFirst({
             where: {

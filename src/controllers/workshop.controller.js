@@ -125,7 +125,8 @@ const getAllWorkShopsController = async function(req,res){
  * @returns {object}
  */
 const deleteWorkShopController = async function(req,res){
-    const id = req.params.id
+    console.log('deleteWorkShopController ',typeof req.params.id)
+    const id = Number(req.params.id)
     const doesWorkShopExist = await prisma.workshop.findFirst({
         where : {
             id : id
